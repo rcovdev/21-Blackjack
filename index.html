@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+    <title>21 BALCKJACK</title>
+</head>
+<body>
+    <main>
+        <header>
+            <h1>21 BLACKJACK</h1>
+        </header>
+        <section class="game-table">
+            <article class="player-hand">
+                <h2>YOUR HAND</h2>
+                <div class="cards"></div>
+                <p class="player-score">Score: 0</p>
+            </article>
+            <article class="dealer-hand">
+                <h2>DEALER HAND</h2>
+                <div class="cards"></div>
+                <p class="dealer-score">Score: 0</p>
+            </article>
+            <aside class="message-board">
+                <p></p>
+            </aside>
+            <nav class="game-controls">
+                <button role="button" class="hit">HIT</button>
+                <button role="button" class="stay">STAY</button>
+                <button role="deal" class="deal">DEAL</button>
+            </nav>
+        </section>
+    </main>
+
+    <script src="./index.js"></script>
+</body>
+</html>
