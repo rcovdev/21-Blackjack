@@ -20,15 +20,7 @@ const shuffleDeck = () => {
     };
 };
 
-const dealCard = () => {
-    if (deck.length === 0) {
-        throw new Error("EMPTY DECK!")
-    }
-    return deck.pop();
-}
-
- 
-initialHands = () => {
+const initialHands = () => {
     let playerHandTotal = 0;
     let dealerHandTotal = 0;
     
@@ -36,11 +28,18 @@ initialHands = () => {
         playerHand.push(dealCard());
         dealerHand.push(dealCard());
     };
-
+    
     playerHandTotal += calculateHandTotal(playerHand);
     dealerHandTotal += calculateHandTotal(dealerHand);
-
+    
     return { playerHandTotal, dealerHandTotal }
+};
+
+const dealCard = () => {
+    if (deck.length === 0) {
+        throw new Error("EMPTY DECK!")
+    }
+    return deck.pop();
 };
 
 const calculateHandTotal = (hand) => {
@@ -113,7 +112,8 @@ const determineWinner = (playerTotal, dealerTotal) => {
 
 createDeck();
 shuffleDeck();
+
 const { playerHandTotal, dealerHandTotal } = initialHands();
 
-console.log("PLAYER TOTAL:", playerHandTotal);
-console.log("DEALER TOTAL:", dealerHandTotal);
+console.log(`PLAYER HAND: ${playerHandTotal}`);
+console.log(`DEALER HAND: ${dealerHandTotal}`);
