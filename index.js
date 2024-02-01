@@ -109,11 +109,3 @@ const determineWinner = (playerTotal, dealerTotal) => {
         console.log("TIE!");
     };
 };
-
-createDeck();
-shuffleDeck();
-
-const { playerHandTotal, dealerHandTotal } = initialHands();
-
-console.log(`PLAYER HAND: ${playerHandTotal}`);
-console.log(`DEALER HAND: ${dealerHandTotal}`);
